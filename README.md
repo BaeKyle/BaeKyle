@@ -1,45 +1,49 @@
-# Hi, I'm Kyle Bae
+# BaeKyle
 
-Backend Software Engineer working on enterprise mutual-aid and financial
-business systems.
+Backend engineer with 9 years of experience building enterprise applications with Java and Spring.
 
-I mainly work with Java, Spring Boot, MyBatis, Oracle, JavaScript, and legacy
-enterprise web applications. My current focus is maintaining and improving
-mutual-aid business workflows with complex screens, reports, approvals,
-sessions, and data-heavy processing.
+I focus on large-scale data processing, long-running background jobs, transactional data consistency, legacy system modernization, and operational reliability.
 
-## Current Project Focus
+## Professional Focus
 
-### Enterprise Mutual-Aid Business System
+- Enterprise application development with Java and Spring Boot
+- Large dataset processing and Excel export architecture
+- Asynchronous jobs and batch processing
+- Transaction design and data consistency with MyBatis and relational databases
+- Modernization of legacy business systems
+- Production issue analysis, performance improvement, and operational stabilization
 
-Backend / Full-stack Maintenance Engineer | 2026 - Present
+## Featured Project
 
-- Maintained Spring Boot, MyBatis, Oracle, and JavaScript based mutual-aid screens
-- Fixed business workflow issues across application, approval, and management screens
-- Investigated popup, grid, save/update/delete, and user lookup behavior
-- Reviewed report output behavior and traced report definitions from legacy sources
-- Improved session extension and SSE reconnection behavior
-- Reviewed Oracle SQL and MyBatis mappings for mutual-aid business data processing
-- Updated user manuals and checked screen behavior against real business workflows
-- Compared legacy PowerBuilder logic with the migrated web system
+### [Enterprise Excel Export Lab](https://github.com/BaeKyle/enterprise-excel-export-lab)
 
-## Engineering Strengths
+A Spring Boot project that demonstrates how to handle large Excel exports without keeping a browser request open or loading the entire dataset and workbook into memory.
 
-- Debugging production-like business issues from UI symptoms to backend queries
-- Reading unfamiliar legacy code and finding the actual behavior quickly
-- Handling mutual-aid business screens with grids, popups, reports, approvals, and batch data
-- Communicating fixes in a practical way for operations and business users
-- Using AI-assisted development carefully while protecting company source code
+The project addresses practical export concerns such as JVM memory pressure, request timeouts, duplicate requests, progress visibility, cancellation, and temporary-file cleanup.
+
+Key points:
+
+- Background export job separated from the download request
+- Streaming XLSX generation with Apache POI `SXSSFWorkbook`
+- Chunked database reads with MyBatis
+- Export status, progress, elapsed time, and file-size tracking
+- Duplicate job prevention
+- Cooperative cancellation and partial-file cleanup
+- Comparison between synchronous download and asynchronous bulk export
+- Portfolio-safe implementation using generated data only
+
+[View Repository](https://github.com/BaeKyle/enterprise-excel-export-lab) · [Architecture Decisions](https://github.com/BaeKyle/enterprise-excel-export-lab/blob/main/docs/architecture-decisions.md)
+
+## Engineering Principles
+
+- Design for realistic data volume and failure conditions.
+- Define transaction boundaries and protect data consistency.
+- Make long-running operations observable and recoverable.
+- Document the benefits, limitations, and evolution criteria of technical decisions.
+- Extract reusable structures from repeated business requirements.
+- Prefer measured results and explicit trade-offs over unsupported claims.
 
 ## Tech Stack
 
-Java, Spring Boot, Spring, MyBatis, Oracle, JavaScript, HTML, CSS, REST API,
-Maven, Git, Linux, WebLogic
-
-## Currently Learning
-
-- LLM-assisted enterprise development
-- RAG and AI agent workflows
-- Oracle troubleshooting
-- Java performance and memory behavior
-- System design for business applications
+Java · Spring Boot · MyBatis · Oracle · Apache POI  
+JavaScript · Maven · Docker · Redis
